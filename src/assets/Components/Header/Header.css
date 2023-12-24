@@ -51,14 +51,23 @@ header {
   justify-content: center;
   height: 100vh;
   width: 100%;
-  background-color: var(--Primary);
+  background-color: #252f39;
 }
 
 .nav-menu-deploy-container{
+  display: flex;
   margin-bottom: 4rem;
-  border: 2px solid var(--Secondary);
-  padding: 3rem;
+
+  padding: 1rem;
   border-radius: 8px;
+  min-width: 75%;
+  min-height: 78%;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 7px 10px 8px 2px #ffabab;
+
+
 }
 
 .nav-menu-deploy-container ul{
@@ -71,4 +80,9 @@ header {
 .nav-menu-deploy-container li{
   text-align: center;
   text-decoration: underline;
+  border: 2px solid #ffabab;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid #ffabab;
+  
 }
