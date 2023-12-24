@@ -1,0 +1,18 @@
+body {
+  background-color: var(--Ternary);
+  scroll-behavior: smooth;
+
+}
+
+main {
+  padding-top: 4rem;
+
+}
+
+strong {
+  color: var(--Primary);
+  font-style: normal;
+
+  line-height: normal;
+}
+
