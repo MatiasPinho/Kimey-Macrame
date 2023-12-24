@@ -8,13 +8,13 @@ import { Telar } from "../Icons/Telar";
 import { Arrow } from "../Icons/Arrow";
 export const MainHtml = () => {
 
-  const Card = ({ paragraph, img, condition }) => {
+  const Card = ({ paragraph,  condition }) => {
     return (
       <article className="personalization-container">
         <div className="decoration-top"></div>
         <p className="paragraph-decoration">{paragraph}</p>
         <div className="image-descript">
-          {img}
+          <Telar></Telar>
           <p>Creamos productos totalmente personalizados a gusto del cliente</p>
         </div>
         {condition ? (
@@ -77,7 +77,6 @@ export const MainHtml = () => {
         <section className="section-cards">
           <Card
             paragraph="Productos personalizados"
-            img=<Telar></Telar>
             condition={true}
           ></Card>
           <div className="arrow-paragraph"></div>
