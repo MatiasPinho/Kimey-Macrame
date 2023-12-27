@@ -149,8 +149,12 @@ gap: 1.5rem;
   width: 21px;
   height: 19px;
   border-radius: 50%;
-  background-color: red;
   list-style: none;
+  cursor: pointer;
+}
+
+.personalization-container li p{
+  display: none;
 }
 
 .personalization-container li:nth-child(1) {
@@ -240,10 +244,11 @@ gap: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
+  justify-content: center;
 }
 
 .image-descript p{
-  text-align: left;
+  text-align: center;
   width: min-content;
 }
 
@@ -256,5 +261,26 @@ gap: 1.5rem;
   margin-top: 5%;
 }
 
+.svg-pink {
+  stroke: var(--Primary);
+  fill: transparent;
+}
 
+.svg-white {
+  stroke: var(--Secondary);
+  fill: transparent;
+}
+
+.svg-beige {
+  stroke: #faebd7;
+  fill: transparent;
+
+}
+
+
+.svg-green {
+  stroke: #7fffd4;
+  fill: transparent;
+
+}
 

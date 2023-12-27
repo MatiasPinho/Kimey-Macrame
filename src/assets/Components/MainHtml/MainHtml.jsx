@@ -2,27 +2,53 @@ import "./MainHtml.css";
 import banner from "/Banner.png";
 import explore from "/Explore.png";
 import products from "/Productos.png";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useContextHelper } from "../../../../useContextHelper";
 import { Telar } from "../Icons/Telar";
 import { Arrow } from "../Icons/Arrow";
 export const MainHtml = () => {
-
-  const Card = ({ paragraph,  condition }) => {
+  const [colorChoice, setColorChoice] = useState(1);
+  const Card = ({ paragraph, condition }) => {
     return (
       <article className="personalization-container">
         <div className="decoration-top"></div>
         <p className="paragraph-decoration">{paragraph}</p>
-        <div className="image-descript">
+        <div
+          className={`image-descript ${
+            colorChoice === 1
+              ? "svg-pink"
+              : colorChoice === 2
+              ? "svg-white"
+              : colorChoice === 3
+              ? "svg-beige"
+              : "svg-green"
+          }`}
+        >
           <Telar></Telar>
           <p>Creamos productos totalmente personalizados a gusto del cliente</p>
         </div>
         {condition ? (
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li onClick={()=>{
+              setColorChoice(1)
+            }}>
+              <p>pink</p>
+            </li>
+            <li onClick={()=>{
+              setColorChoice(2)
+            }}>
+              <p>white</p>
+            </li>
+            <li onClick={()=>{
+              setColorChoice(3)
+            }}>
+              <p>beige</p>
+            </li>
+            <li onClick={()=>{
+              setColorChoice(4)
+            }}>
+              <p>green</p>
+            </li>
           </ul>
         ) : null}
 
@@ -75,10 +101,7 @@ export const MainHtml = () => {
           </div>
         </article>
         <section className="section-cards">
-          <Card
-            paragraph="Productos personalizados"
-            condition={true}
-          ></Card>
+          <Card paragraph="Productos personalizados" condition={true}></Card>
           <div className="arrow-paragraph"></div>
         </section>
         <article className="about-me">
